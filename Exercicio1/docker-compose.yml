@@ -1,0 +1,27 @@
+version: '2.2'
+services:
+  oficina: 
+    image: oficina-docker:aula2-volumes
+    build: .
+    ports:
+     - 5010:5000
+    volumes:
+     - .:/usr/src
+     - aula2-logs:/tmp
+
+  nginx:
+   image: nginx:alpine
+   ports:
+    - 8080:8080
+
+  db:
+   image: postgres:9.6
+   ports:
+    - 5432:5432
+
+  cache:
+   image: memcached
+
+volumes:
+  aula2-logs:
+    external: true

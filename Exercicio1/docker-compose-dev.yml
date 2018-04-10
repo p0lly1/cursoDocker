@@ -1,0 +1,11 @@
+version: '2.2'
+services: 
+ oficina:
+ db:
+  image: postgres:9.6
+  restart: always
+ volumes:
+  - data: /var/lib/postgresql/data
+
+volumes:
+ data:
