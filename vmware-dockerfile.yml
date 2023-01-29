@@ -1,5 +1,5 @@
 #DOCKERFILE DE BUILD DE IMAGEM DOCKER 'VMWARE/POWERCLICORE'
-FROM microsoft/powershell:ubuntu16.04
+FROM microsoft/powershell:ubuntu:latest
 
 LABEL authors="renoufa@vmware.com,jaker@vmware.com"
 
